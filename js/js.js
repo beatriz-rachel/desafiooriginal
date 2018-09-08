@@ -1,31 +1,38 @@
 $( document ).ready(function() {
-	/*slider*/
-	$('#carousel-main').carousel({
-	    pause: true,
-	    interval: 4000,
-	  });
+	/*products*/	
+	$(".regular").slick({
+	    dots: true,
+	    infinite: true,
+	    slidesToShow: 4,
+	    slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 479,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
 
-	$('#carousel-pager').carousel({
-	    pause: true,
-	    interval: false,
-	  });
-
-	$('.carousel .vertical .carousel-item').each(function(){
-	  var next = $(this).next();
-	  if (!next.length) {
-	    next = $(this).siblings(':first');
-	  }
-	  next.children(':first-child').clone().appendTo($(this));
-	  
-	  for (var i=0;i<2;i++) {
-	    next=next.next();
-	    if (!next.length) {
-	    	next = $(this).siblings(':first');
-	  	}
-	    
-	    next.children(':first-child').clone().appendTo($(this));
-	  }
+          ]
 	});
+	$(".slick-dots").addClass("worded");
+	$( "<span> de 10</span>" ).appendTo( ".slick-dots li" );
+	$(window).resize(function() {
+		if(!($(".slick-dots").hasClass("worded"))){
+			$(".slick-dots").addClass("worded");
+	  		$( "<span> de 10</span>" ).appendTo( ".slick-dots li" );
+		}
+	});	
 
 	/*seleciona cor*/
 	$(".prs-esp-colors li").click(function() {

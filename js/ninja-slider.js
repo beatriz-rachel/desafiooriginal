@@ -5,7 +5,7 @@ var nsOptions =
     transitionType: "fade", //"fade", "slide", "zoom", "kenburns 1.2" or "none"
     autoAdvance: false,
     delay: "default",
-    transitionSpeed: 700,
+    transitionSpeed: 2000,
     aspectRatio: "2:1",
     initSliderByCallingInitFunc: false,
     shuffle: false,
