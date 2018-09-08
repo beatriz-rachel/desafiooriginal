@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link href="css/ninja-slider.css" rel="stylesheet" />
+<link href="css/thumbnail-slider.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -73,8 +75,100 @@
 		</div>
 	</div>
 </header>
-<script src="js/jquery-3.3.1.min.js"></script>
 
+<div class="container">
+	<section class="product-main">
+		<div class="product-main-info">
+			<div class="product-image">
+				<div class="product-image-container">
+
+				    <div id="ninja-slider" style="float:left;">
+            <div class="slider-inner">
+                <ul>
+                    <li><a class="ns-img" href="img/prod02.jpg"></a></li>
+                    <li><a class="ns-img" href="img/prod05.jpg"></a></li>
+                    <li><a class="ns-img" href="img/prod05-black.jpg"></a></li>
+                    <li><a class="ns-img" href="img/prod05-brown.jpg"></a></li>
+                    <li><a class="ns-img" href="img/prod05-pink.jpg"></a></li>
+                </ul>
+            </div>
+        </div>
+
+				</div>				
+			</div>
+			<div class="product-description">
+				<div class="product-description-container">
+					<h1>Rasteira Tira Dedo</h1>
+					<span>RT 0568 | 03.07.0653</span>
+
+					<p class="product-price"><span class="prd-price-old"><strike>R$69,00</strike> | </span><strong>R$55,20</strong><span class="prd-price-par">ou 6x de R$ 9,20</span></p>
+					
+
+					<div class="prd-especificacoes">
+						<p>Cor: <span class="prd-esp-slct">(Fucsia)</span></p>
+						<ul class="prs-esp-colors">
+							<li class="rosa selected">Rosa</li>
+							<li class="azul">Azul</li>
+							<li class="marrom">Marrom</li>
+							<li class="preto">Preto</li>
+						</ul>
+						<p>Tamanho: <span class="prd-esp-slct">(37)</span> <a class="prd-medidas" href="">Guia de medidas</a></p>
+						<ul class="prd-esp-tam">
+							<li>33</li>
+							<li>34</li>
+							<li>35</li>
+							<li>36</li>
+							<li class="selected">37</li>
+							<li>38</li>
+							<li>39</li>
+							<li>40</li>
+							<li>41</li>
+							<li>42</li>
+						</ul>
+					</div>
+
+					<a class="btn" href="">Adicionar à Sacola</a>
+
+					<p class="prd-info">Rasteira em atanado soft com tira no dedo e fechamento de fivela. Possui sola sempre na cor do cabedal.</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="product-sidebar">
+			<div class="video-player">
+				<a href="">Vídeo</a>
+				<a href=""><img src="img/play.png"></a>
+			</div>
+			<div id="thumbnail-slider" style="float:left;">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <a class="thumb" href="img/prod02.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="img/prod05.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="img/prod05-black.jpg"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="img/prod05-brown.jpg"></a>
+                    </li>
+                    <li>
+                    	<a class="thumb" href="img/prod05-pink.jpg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+		</div>	
+	</section>
+</div>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ninja-slider.js"></script>
+<script src="js/thumbnail-slider.js" type="text/javascript"></script>
 <script src="js/js.js"></script>
 </body>
 </html>
