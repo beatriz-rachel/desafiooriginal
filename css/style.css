@@ -11,7 +11,7 @@ h5{text-transform:uppercase;font-size: 1.6em;}
 h6{text-transform: uppercase;font-size: 1.15em;}
 
 /*btn*/
-.btn{width:100%;font-size: 1.3em;color:#fff;background:#32917B;text-transform: uppercase;padding:20px 0;border-radius: 3px;white-space: normal;}
+.btn{width:100%;font-size: 1.3em;color:#fff;background:#32917B;text-transform: uppercase;padding:20px 0;border-radius: 3px;white-space: normal!important;}
 .btn:hover{color:#fff;text-decoration: none;background:#2d806c;}
 .btn-form{background:#DE8F75;padding:8px 20px;width:auto;font-size:1em;}
 .btn-form:hover{background:#b77762;}
@@ -258,6 +258,9 @@ lightbox
 	.calcados-menu svg{display:none;}
 }
 @media (min-width: 1px) and (max-width:767px){
+	/*products list*/
+	.products-list{top: 0;}
+
 	/*footer*/
 	.footer-address,.footer-logo{text-align:center;}
 }
