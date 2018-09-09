@@ -147,7 +147,7 @@ produto
 lista de produtos
 *
 ******/
-.products-list{padding-top: 75px;}
+.products-list{padding-top: 75px; }
 .products-list h2{color:#DE8F75;text-align:center;}
 .products-list-slider{margin-top:30px;}
 .prd-list-prd-wrapper{margin:5px;}
