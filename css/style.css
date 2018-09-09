@@ -96,7 +96,7 @@ produto
 .product-main-info{margin:0 90px 0 140px;}
 
 /*image*/
-.product-image{width:50%;float:left;overflow:hidden;margin-top:10px;}
+.product-image{width:50%;float:left;overflow:hidden;margin-top:10px;color: #fff;}
 .product-image-container{margin-right:10%;}
 .product-image-container img{width:100%;}
 
