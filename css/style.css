@@ -126,7 +126,7 @@ produto
 .video-player a{color:#DE8F75;display:block;}
 
 /*carousel*/
-#ninja-slider{width:100%;}
+#ninja-slider{width:100%;margin-top: -20px;}
 #ninja-slider ul{ padding-top: 129%!important;}
 #ninja-slider .ns-img{background-size: 100%;}
 #ninja-slider-prev{display:none;}
