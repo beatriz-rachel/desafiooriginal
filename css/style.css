@@ -7,12 +7,16 @@ ul,li{padding:0;margin:0;list-style: none;}
 /*titles*/
 h1{font-size: 1.8em;text-transform:uppercase;}
 h2{font-size: 1.86em;text-transform: uppercase;}
+h5{text-transform:uppercase;font-size: 1.6em;}
+h6{text-transform: uppercase;font-size: 1.15em;}
 
 /*btn*/
 .btn{width:100%;font-size: 1.3em;color:#fff;background:#32917B;text-transform: uppercase;padding:20px 0;border-radius: 3px;}
 .btn:hover{color:#fff;text-decoration: none;background:#2d806c;}
 .btn-form{background:#DE8F75;padding:8px 20px;width:auto;font-size:1em;}
 .btn-form:hover{background:#b77762;}
+.btn-transparent{background:transparent;border:2px solid #DE8F75;color:#DE8F75;font-size:0.85em;width:auto;padding:8px 0px;}
+.btn-transparent:hover{border:2px solid #DE8F75;color:#DE8F75;background:#ffebe5;}
 
 /******
 *
@@ -20,7 +24,8 @@ header
 *
 ******/
 header nav a,header nav a:hover{color:#686868;}
-header nav li{display:inline-block;position:relative;}
+header nav li{display:inline-block;}
+.menu-toggle{display:none;}
 
 /*logo*/
 .logo {margin:25px auto;}
@@ -28,16 +33,40 @@ header nav li{display:inline-block;position:relative;}
 .logo svg path{fill:#de8f75;}
 
 /*site-navigation-wrapper*/
-.site-navigation-wrapper{ border-top:1px solid #cccccc;  border-bottom:1px solid #cccccc;}
+.site-navigation-wrapper{ border-top:1px solid #cccccc;  border-bottom:1px solid #cccccc;position:relative;}
 .site-navigation-wrapper .row{align-items: center;}
 
 /*login*/
+.login-menu li{position:relative;}
 .login-menu li a{padding:0 5px;margin:0 5px;font-size: 0.86em;}
 .login-menu li:first-child a:before{content:"";display:block;width:1px;height:10px;background:#686868;position:absolute;right:-3px;top: 7px;}
 
 /*main-menu*/
+.main-menu{position:static;}
 .main-menu a{text-transform:uppercase;padding:12px 20px;display:inline-block;}
 .main-menu a:hover{background:#EBEBEB;text-decoration: none;}
+
+/*submenu*/
+.submenu-wrapper{display: none; position: absolute; top: 46px; z-index: 100; background: #fff; width: 100%;right: 0;}
+.main-menu li:hover .submenu-wrapper{display:block;}
+.submenu-title{float:left;width:33%;}
+.submenu-title img{margin-top:50px;margin-bottom: 30px;}
+.submenu-title .btn-transparent{display:block;margin-top:30px;width:100px;margin:0 auto;}
+.submenu-menu{float:left;width:33%;}
+.submenu-menu ul{border-left:1px solid #C4C4C4;margin: 15px 0;}
+.submenu-menu li{display:block;text-align: left;}
+.submenu-menu a{text-transform: none;color:#DE8F75;}
+.submenu-banner{float:left;width:33%;}
+.submenu-banner img{margin-top:30px;}
+
+/*calçados menu*/
+.calcados-menu ul li{float:left;width:20%;text-align:center;height:150px;}
+.calcados-menu svg{width:115px; height:auto;display:block;}
+.calcados-menu path{fill:#AEB6C1;}
+.calcados-menu ul li:hover a{background:transparent;}
+.calcados-menu ul li:hover path{fill:#DE8F75;}
+.calcados-menu ul li a{text-transform: none;}
+.calcados-menu span{color:#DE8F75;}
 
 /*search*/
 .search-wrapper {display:inline-block;}
@@ -133,11 +162,14 @@ lista de produtos
 .prd-list-prd-esp-colors li.azul{background:#6B85C1;}
 .prd-list-prd-esp-colors li.marrom{background:#A14830;}
 .prd-list-prd-esp-colors li.preto{background:#000000;}
-.slick-prev.slick-arrow{background:url(../img/product-list-left.png) no-repeat center center;width:35px;height:35px;display:block;text-indent:-999999px;bottom: -50px; top: auto;left:0;}
-.slick-next.slick-arrow{background:url(../img/product-list-right.png) no-repeat center center;width:35px;height:35px;display:block;text-indent:-999999px;bottom: -50px; top: auto;right:0;}
+.slick-prev.slick-arrow{background:url(../img/product-list-left.png) no-repeat center center;width:35px;height:35px;display:block;text-indent:-999999px;bottom: -50px; top: auto;left:0;z-index:10;}
+.slick-next.slick-arrow{background:url(../img/product-list-right.png) no-repeat center center;width:35px;height:35px;display:block;text-indent:-999999px;bottom: -50px; top: auto;right:0;z-index:10;}
 .slick-dots li{display:none;width:65px;text-align: center;margin:0 auto;color:#2A5A75;}
 .slick-dots li.slick-active{display:block;}
 .slick-dots li button{font-size: 15px;line-height: 15px;color: #2A5A75;display:inline-block;}
+.quickview{position:absolute;top:10px;right:10px;padding:0 10px;border:1px solid #DE8F75;border-radius:20px;font-size:22px;background: rgba(255, 255, 255, 0.5);}
+a.quickview{color:#DE8F75;}
+a.quickview:hover{text-decoration: none;}
 
 /******
 *
@@ -153,14 +185,41 @@ footer .container{position:relative;}
 .footer-social li{display:inline-block;margin:2px;}
 
 /*footer navs*/
-.footer-nav h6{color:#AEB6C1;font-size:0.85em;text-transform:uppercase;font-weight:bold;margin-top:30px;}
+.footer-nav h6{color:#AEB6C1;font-size:0.85em;font-weight:bold;margin-top:30px;}
 .footer-nav a{color:#202020;}
 
 /*news*/
-.footer-news{position: absolute; top: -30px; right: 10px; border: 2px solid #AEB6C1; padding: 15px; text-align: center; border-radius: 100px; background: #fff;top: -75px;}
-.footer-news h6{color:#202020;text-transform: uppercase;font-size: 1.15em;margin: 30px 0 0;}
+.footer-news{position: absolute; top: -30px; right: 10px; border: 2px solid #AEB6C1; padding: 15px; text-align: center; border-radius: 150px; background: #fff;top: -75px;}
+.footer-news h6{color:#202020;margin: 30px 0 0;}
 .footer-news input[type="text"],.footer-news input[type="e-mail"]{border:0;border-bottom:1px solid #AEB6C1;margin:10px;}
 
+/*address*/
+.footer-address{background:#DE8F75;color:#fff;margin-top: 25px;}
+.footer-address p{margin:0;}
+.footer-logo{margin-top: 20px;text-align: right;}
+.footer-logo svg{width:110px;height:auto;margin:0 auto;}
+.footer-logo svg path{fill:#fff;}
+
+/******
+*
+lightbox
+*
+******/
+.lightbox{display:none!important;position:absolute;top:100px;left:0;right:0;display:block;width:500px;margin:0 auto;z-index:1000;background:#fff;border-radius:3px;}
+.lightbox-close{ position: absolute; top: 0; right: 15px; font-size: 2em; color: #5F75AA;}
+.lightbox-close:hover{text-decoration: none;}
+.lightbox-bg{display:none!important;position:absolute;top:0;left:0;width:100000px;height:100000px;z-index:999;background:#000;opacity:0.6;}
+.lightbox.open,.lightbox-bg.open{display:block!important;}
+.lightbox-content{text-align:center;max-width:80%;margin:0 auto;}
+.lightbox-content img{max-width:100%;margin-top:50px;}
+.lightbox-content h5{color:#DE8F75;margin: 10px 0;}
+.lightbox-content .continuar{color:#AEB6C1;margin:10px 0;display:inline-block;}
+
+@media (min-width:1201px){
+	/*product list*/
+	.slick-prev.slick-arrow {left: 515px;}
+	.slick-next.slick-arrow {right: 510px;}
+}
 @media (min-width: 481px) and (max-width:1023px){
 	/*main product*/
 	.product-image{width:100%;}
@@ -173,9 +232,41 @@ footer .container{position:relative;}
 	.footer-social,.footer-nav{width:50%; height: 150px;}
 	.footer-news{position:static;width:100%;border:0; text-align: left;padding:0;}
 }
-@media (min-width: 1px) and (max-width:480px){
+@media (min-width: 1px) and (max-width:844px){
+	/*header*/
+	.logo{float:left;}
+	.menu-toggle{display:block;float:right;float: right; margin-top: 20px;}
+	.main-menu{display:none;position:absolute;top:0;right:0;background:#fff;z-index: 100; width: 100%; max-width: 100%;-webkit-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.32); -moz-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.32); box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.32);}
+	.main-menu ul{text-align:right!important;}
+	.main-menu li{display:block;}
+	.main-menu a{display:block;}
+	.submenu-wrapper {display:block;position:static;}
+	.submenu-wrapper .submenu-title{display:none;}
+	.submenu-wrapper .submenu-menu{display:block;float:none;width:100%;}
+	.submenu-menu ul{border:0;margin:0;}
+	.submenu-menu li{text-align: right;}
+	.submenu-menu a{color:#686868;padding: 5px 40px;}
+	.submenu-wrapper .submenu-banner{display:none;}
+	.site-navigation-wrapper .row{height: 40px;}
+	.search-basket-wrapper{position: absolute;right: 0;}
+
+	/*calcados menu*/
+	.calcados-menu ul li{height:auto;width:100%;display:block;float:none;text-align: right;}
+	.calcados-menu a {color:#686868;padding: 5px 40px;}
+	.calcados-menu a:hover{background:#EBEBEB!important;}
+	.calcados-menu a span{color:#686868;}
+	.calcados-menu svg{display:none;}
+}
+@media (min-width: 1px) and (max-width:767px){
+	/*footer*/
+	.footer-address,.footer-logo{text-align:center;}
+}
+@media (min-width: 1px) and (max-width:600px){
 	/*main product*/
 	.product-main-info {margin: 0 0px 0 95px;}
+}
+@media (min-width: 1px) and (max-width:480px){
+	/*main product*/
 	.product-image{width:100%;}
 	.product-image-container{margin:0;}
 	.product-description{width:100%;}

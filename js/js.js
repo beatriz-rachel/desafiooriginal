@@ -35,8 +35,8 @@ $( document ).ready(function() {
 	});	
 
 	/*seleciona cor*/
-	$(".prs-esp-colors li").click(function() {
-	  	$(".prs-esp-colors li").each(function( index ) {
+	$(".prd-esp-colors li").click(function() {
+	  	$(".prd-esp-colors li").each(function( index ) {
 		  if ($(this).hasClass("selected")){
 		  	$(this).removeClass("selected");
 		  }
@@ -52,5 +52,29 @@ $( document ).ready(function() {
 		  }
 		});
 		$(this).addClass("selected");
+	});
+
+	/*menu toggle*/	
+	$( ".menu-toggle" ).click(function(e) {
+	  e.preventDefault();
+	  $( ".main-menu" ).toggle();
+	});
+
+	/*lightbox adicionar ao carrinho*/
+	$( ".add-basket" ).click(function(e) {
+	  e.preventDefault();
+	  $( ".lightbox" ).addClass('open');
+	  $( ".lightbox-bg" ).addClass('open');
+	});
+		
+	$( ".lightbox-bg" ).click(function(e) {
+	  e.preventDefault();
+	  $(".lightbox").removeClass('open');
+	  $(".lightbox-bg").removeClass('open');
+	});
+	$( ".lightbox-close" ).click(function(e) {
+	  e.preventDefault();
+	  $(".lightbox").removeClass('open');
+	  $(".lightbox-bg").removeClass('open');
 	});
 });
