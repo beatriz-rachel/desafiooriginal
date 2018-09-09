@@ -51,7 +51,7 @@ header nav li{display:inline-block;}
 .main-menu li:hover .submenu-wrapper{display:block;}
 .submenu-title{float:left;width:33%;}
 .submenu-title img{margin-top:50px;margin-bottom: 30px;}
-.submenu-title .btn-transparent{display:block;margin-top:30px;width:100px;margin:0 auto;}
+.submenu-title .btn-transparent{display:block;margin-top:30px;width:115px;margin:0 auto;}
 .submenu-menu{float:left;width:33%;}
 .submenu-menu ul{border-left:1px solid #C4C4C4;margin: 15px 0;}
 .submenu-menu li{display:block;text-align: left;}
@@ -60,13 +60,15 @@ header nav li{display:inline-block;}
 .submenu-banner img{margin-top:30px;}
 
 /*calçados menu*/
-.calcados-menu ul li{float:left;width:20%;text-align:center;height:150px;}
+.calcados-menu ul{margin-bottom: 30px; overflow: hidden;}
+.calcados-menu ul li{float:left;width:20%;text-align:center;height:150px;display: flex; align-items: flex-end;margin-top:30px;}
+.calcados-menu ul li.fst-row{height:90px;}
 .calcados-menu svg{width:115px; height:auto;display:block;}
 .calcados-menu path{fill:#AEB6C1;}
 .calcados-menu ul li:hover a{background:transparent;}
 .calcados-menu ul li:hover path{fill:#DE8F75;}
 .calcados-menu ul li a{text-transform: none;}
-.calcados-menu span{color:#DE8F75;}
+.calcados-menu span{color:#DE8F75;margin-top: 5px; display: inline-block;}
 
 /*search*/
 .search-wrapper {display:inline-block;}
@@ -91,7 +93,7 @@ header nav li{display:inline-block;}
 produto
 *
 ******/
-.product-main-container{position:relative;color: #fff}
+.product-main-container{position:relative;color: transparent;}
 .product-sidebar{position:absolute;left:0;top:0;width:85px;}
 .product-main-info{margin:0 90px 0 140px;color:#202020;}
 
@@ -119,6 +121,7 @@ produto
 .prd-esp-colors li.selected{border-color:#E0DA9C;}
 .prd-esp-tam li{background:#EBEBEB;height:34px;width:34px;color:#2A5A75; text-align: center; padding-top: 5px;}
 .prd-esp-tam li.selected{background:#E0DA9C;font-weight:bold;}
+.prd-medidas{ float: right; color: #DE8F75; text-decoration: underline;} 
 .prd-info{margin-top:25px;}
 
 /*video*/
@@ -205,13 +208,14 @@ footer .container{position:relative;}
 lightbox
 *
 ******/
-.lightbox{display:none!important;position:absolute;top:100px;left:0;right:0;display:block;width:500px;margin:0 auto;z-index:1000;background:#fff;border-radius:3px;}
+.lightbox{display:none!important;position:fixed;top:50px;left:0;right:0;display:block;width:500px;margin:0 auto;z-index:1000;background:#fff;border-radius:3px;}
 .lightbox-close{ position: absolute; top: 0; right: 15px; font-size: 2em; color: #5F75AA;}
 .lightbox-close:hover{text-decoration: none;}
 .lightbox-bg{display:none!important;position:absolute;top:0;left:0;width:100000px;height:100000px;z-index:999;background:#000;opacity:0.6;}
 .lightbox.open,.lightbox-bg.open{display:block!important;}
 .lightbox-content{text-align:center;max-width:80%;margin:0 auto;}
-.lightbox-content img{max-width:100%;margin-top:50px;}
+.lightbox-img-wrapper{margin-top:50px;}
+.lightbox-content img{max-width:100%;}
 .lightbox-content h5{color:#DE8F75;margin: 10px 0;}
 .lightbox-content .continuar{color:#AEB6C1;margin:10px 0;display:inline-block;}
 
@@ -226,6 +230,10 @@ lightbox
 	.product-image-container{margin:0;}
 	.product-description{width:100%;}
 	.product-description-container{margin:0;}
+
+	/*lightbox*/
+	.lightbox{position:fixed;}
+	.lightbox-img-wrapper{max-height:450px;overflow:hidden;}
 }
 @media (min-width: 481px) and (max-width:959px){
 	/*footer*/
@@ -251,10 +259,12 @@ lightbox
 	.search-basket-wrapper{position: absolute;right: 0;}
 
 	/*calcados menu*/
-	.calcados-menu ul li{height:auto;width:100%;display:block;float:none;text-align: right;}
+	.calcados-menu ul{margin:0;}
+	.calcados-menu ul li{height:auto;width:100%;display:block;float:none;text-align: right;display:block;margin-top:0;}
+	.calcados-menu ul li.fst-row{height:auto;}
 	.calcados-menu a {color:#686868;padding: 5px 40px;}
 	.calcados-menu a:hover{background:#EBEBEB!important;}
-	.calcados-menu a span{color:#686868;}
+	.calcados-menu a span{color:#686868;margin:0;}
 	.calcados-menu svg{display:none;}
 }
 @media (min-width: 1px) and (max-width:767px){
@@ -267,6 +277,12 @@ lightbox
 @media (min-width: 1px) and (max-width:600px){
 	/*main product*/
 	.product-main-info {margin: 0 0px 0 95px;}
+
+	/*lightbox*/
+	.lightbox{width:290px;position:fixed;}
+	.lightbox-img-wrapper{max-height:310px;overflow:hidden;}
+	.lightbox-content h5{font-size:1em;}
+	.lightbox .btn{padding: 10px 0;}
 }
 @media (min-width: 1px) and (max-width:480px){
 	/*main product*/

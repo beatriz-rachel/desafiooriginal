@@ -42,6 +42,8 @@ $( document ).ready(function() {
 		  }
 		});
 		$(this).addClass("selected");
+		var color = $(this).text();
+		$(".color-slct").text(color);
 	});
 
 	/*seleciona tamanho*/
@@ -52,6 +54,8 @@ $( document ).ready(function() {
 		  }
 		});
 		$(this).addClass("selected");
+		var tamanho = $(this).text();
+		$(".tam-slct").text(tamanho);
 	});
 
 	/*menu toggle*/	
