@@ -170,6 +170,10 @@ lista de produtos
 a.quickview{color:#DE8F75;}
 a.quickview:hover{text-decoration: none;}
 
+/*segunda imagem*/
+.prd-scd-img{position: absolute;opacity: 0; visibility: hidden;height:0;width:0;-webkit-transition: opacity 600ms, visibility 600ms;  transition: opacity 600ms, visibility 600ms;top:0;}
+.prd-img-wrapper:hover .prd-scd-img{visibility: visible; opacity: 1; height:auto; width:100%;}
+
 /******
 *
 footer
